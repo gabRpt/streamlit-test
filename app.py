@@ -50,16 +50,16 @@ if 'selected_file' not in st.session_state:
 with st.sidebar:
     select_file = st.selectbox('Select a file', files)
     
-    my_date_input = st.date_input(
-        "Select range of data acquisition",
-        value=st.session_state.date_range,
-        min_value=ACQUISITION_START_DATE,
-        max_value=ACQUISITION_END_DATE
-    )
+    # my_date_input = st.date_input(
+    #     "Select range of data acquisition",
+    #     value=st.session_state.date_range,
+    #     min_value=ACQUISITION_START_DATE,
+    #     max_value=ACQUISITION_END_DATE
+    # )
     
     if st.button('Update'):
         st.session_state.selected_file = select_file
-        st.session_state.date_range = my_date_input
+        # st.session_state.date_range = my_date_input
         
 
 
